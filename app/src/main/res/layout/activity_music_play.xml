@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.MusicPlayActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_song_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_album_title"
+        android:layout_margin="16dp"
+        android:padding="8dp" />
+
+
+    <TextView
+        android:id="@+id/tv_album_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_song_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="Song Name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/tv_song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_shuffle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:text="Song Name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+    <ImageView
+        android:id="@+id/iv_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/v_time_lay"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_favorite_unselected" />
+    <ImageView
+        android:id="@+id/iv_shuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/v_time_lay"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_repeat_all" />
+
+
+    <RelativeLayout
+        android:id="@+id/v_time_lay"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_above="@id/v_actions_lay"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_from_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            tools:text="0.00" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/v_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/tv_to_time"
+            android:layout_toRightOf="@id/tv_from_time"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_to_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            tools:text="05.00" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/v_actions_lay"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@null"
+            android:src="@drawable/ic_skip_previous" />
+
+        <ImageButton
+            android:id="@+id/ib_play_pause"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@null"
+            android:src="@drawable/ic_pause" />
+
+        <ImageButton
+            android:id="@+id/ib_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@null"
+            android:src="@drawable/ic_skip_next" />
+    </LinearLayout>
+
+</RelativeLayout>
